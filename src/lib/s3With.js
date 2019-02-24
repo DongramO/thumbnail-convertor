@@ -29,7 +29,6 @@ exports.download = async (params) => {
 exports.upload = (Body, Bucket, Key, ContentType) => {
   return new Promise((resolve, reject) => {
     s3.putObject({ Bucket, Key, Body, ContentType, ACL: 'public-read-write' },(err, value) => {
-      console.log(value)
       if(err) reject(err)
       else resolve(value)
     });

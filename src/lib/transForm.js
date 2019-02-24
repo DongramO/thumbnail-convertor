@@ -1,6 +1,5 @@
 const gm = require('gm').subClass({ imageMagick: true });
 const s3With = require('./s3With')
-var streamToBuffer = require('stream-to-buffer')
 const { sizeFromKey } = require('lib/thumbNail')
 
 const resize = (imageOriginPath, resizeType, pixelSize, imageType) => {

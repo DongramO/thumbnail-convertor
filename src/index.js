@@ -50,7 +50,6 @@ app.use((ctx, next) => {
   return next()
 })
 
-
 router.use('/files', files.routes());
 router.get('/health', (ctx) => {
   ctx.body = {
@@ -61,19 +60,7 @@ router.get('/health', (ctx) => {
   console.log(ctx.body)
 });
 
-// To do => server session 파기를 위한 대체 방법 찾기.
-app.keys = ['some secret hurr']
-const CONFIG = {
-  key: 'mc_se',
-  maxAge: 30000,
-  overwrite: true,
-  httpOnly: true,
-  signed: true,
-  rolling: false,
-  renew: false,
-}
 
-app.use(session(CONFIG, app))
 app.use(router.allowedMethods())
 app.use(router.routes())
 
