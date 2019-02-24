@@ -1,11 +1,8 @@
 const moment = require('moment')
 const shortid = require('shortid')
+const { YYYY, DD, MM } = require('./date')
 
-const date = {
-  YYYY: moment().format('YYYY'),
-  MM: moment().format('MM'),
-}
-const keyGenerator = (image) => `boards/service/${date.YYYY}/${date.MM}/${shortid.generate()}.${Date.now()}.${image.originalname.split('.').pop()}`
+const keyGenerator = (image) => `boards/service/${YEAR}/${MONTH}/${shortid.generate()}.${image.originalname.split('.').pop()}`
 
 module.exports = {
   keyGenerator
