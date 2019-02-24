@@ -28,15 +28,11 @@
     "moment": "^2.22.2",
     "multer": "^1.4.1",
     "multer-s3": "^2.9.0",
-    "multer-s3-transform": "^2.3.2",
     "mysql": "^2.16.0",
-    "mysql-pool-booster": "^1.0.3",
     "path": "^0.12.7",
     "serverless-http": "^1.8.0",
     "shortid": "^2.2.14",
-    "stream-to-buffer": "^0.1.0",
-    "urlencode": "^1.1.0",
-    "utf8": "^3.0.0"
+    "urlencode": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -47,13 +43,8 @@
     "start:prod": "pm2 start pm2/mocam.server.prod.json && pm2 logs mocam.server.prod"
   },
   "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/univbook/thumbnail-generator.git"
+    "type": "git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/univbook/thumbnail-generator/issues"
-  },
-  "homepage": "https://gitlab.com/univbook/thumbnail-generator#readme"
+  "license": "ISC"
 }
