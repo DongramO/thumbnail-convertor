@@ -27,7 +27,7 @@ exports.deleteImageFromUser = (connection, { user_id }, { board_id }) => {
     DELETE FROM
       MC_BOARD_FILE
     WHERE
-      cr_user = ? AND file_id = ?
+      file_id = ? AND cr_user = ?
   `
   const quesy = connection.quesy(Query, [user_id, file_id], (err, result) => {
     err 
